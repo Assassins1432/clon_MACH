@@ -1,4 +1,3 @@
-// lib/src/presentation/screens/card/card_screen.dart
 import 'package:flutter/material.dart';
 
 class QrScreen extends StatelessWidget {
@@ -6,13 +5,8 @@ class QrScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Cards'),
-      ),
-      body: const Center(
-        child: Text('Card Screen'),
-      ),
+    return Center(
+      child: const Text('4'),
     );
   }
 }
