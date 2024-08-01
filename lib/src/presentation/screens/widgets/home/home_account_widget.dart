@@ -1,17 +1,23 @@
 // widgets/account_widget.dart
+import 'package:app_replica_mach/src/presentation/provider/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AccountWidget extends StatelessWidget {
+class AccountWidget extends ConsumerWidget {
   const AccountWidget({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final ThemeMode currentThemeMode = ref.watch(themeNotifierProvider);
+
     return Container(
       width: MediaQuery.of(context).size.width * 0.1,
       margin: const EdgeInsets.all(10.0),
       padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: currentThemeMode == ThemeMode.light
+            ? Colors.white
+            : const Color(0xFF6300EC),
         borderRadius: BorderRadius.circular(10.0),
         boxShadow: [
           BoxShadow(

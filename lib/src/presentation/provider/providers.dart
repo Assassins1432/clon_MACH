@@ -1,7 +1,13 @@
-// lib/src/provider/providers.dart
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-// Ejemplo de un proveedor simple
-final exampleProvider = Provider<String>((ref) {
-  return 'Hello, Riverpod!';
-});
+part 'providers.g.dart';
+
+@riverpod
+double saldo(SaldoRef ref) {
+  return 1089.0; // Valor del saldo
+}
+
+@riverpod
+double tipoCambio(TipoCambioRef ref) {
+  return 986.0; // Tipo de cambio
+}
